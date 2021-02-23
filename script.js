@@ -6,10 +6,12 @@ $(".buy").click(function() {
   let item = $("#item").val();
   if(item === "") {
     $(".message").text("you must enter an item");
-  } else if (item === "coke") {
+    
+  } else if (item === "coke" && money >= cokes) {
     money = money - cokes;
     $("#moneyleft").html(money);
-  } else if (item === "chips") {
+    
+  } else if (item === "chips" && money >= chips) {
     money = money - chips;
     $("#moneyleft").html(money);
   }
